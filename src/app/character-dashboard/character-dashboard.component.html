@@ -1,5 +1,5 @@
-@for (character of characters; track character) {
-    <app-character-card [character]="character" />
-}
-
-<button *ngIf="pagination.hasNext" (click)="loadCharacters()">...</button>
+<div class="characters" appScrollNearEnd (nearEnd)="loadCharacters()">
+    @for (character of characters; track character) {
+        <app-character-card [character]="character" />
+    }
+</div>

@@ -3,13 +3,14 @@ import { CharacterCardComponent } from "../character-card/character-card.compone
 import { CharacterService } from '../character.service';
 import { Character } from '../models/character.model';
 import { NgIf } from '@angular/common';
+import { ScrollNearEndDirective } from '../shared/directives/scroll-near-end.directive';
 
 @Component({
   selector: 'app-character-dashboard',
   standalone: true,
   templateUrl: './character-dashboard.component.html',
   styleUrl: './character-dashboard.component.css',
-  imports: [CharacterCardComponent, NgIf]
+  imports: [CharacterCardComponent, NgIf, ScrollNearEndDirective]
 })
 export class CharacterDashboardComponent {
 
@@ -37,8 +38,6 @@ export class CharacterDashboardComponent {
         this.characters.push(...page.results)
         this.pagination.hasNext = page.info.next !== null
         this.pagination.currentPage++
-
-        console.log(this.characters)
       },
       error: (error) => console.error(error)
     })
