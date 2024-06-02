@@ -1,1 +1,5 @@
-<p>character-dashboard works!</p>
+@for (character of characters; track character) {
+    <app-character-card [character]="character" />
+}
+
+<button *ngIf="pagination.hasNext" (click)="loadCharacters()">...</button>

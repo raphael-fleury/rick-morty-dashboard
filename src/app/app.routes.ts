@@ -4,5 +4,6 @@ import { CharacterDetailsComponent } from './character-details/character-details
 
 export const routes: Routes = [
     { path: 'characters', component: CharacterDashboardComponent },
-    { path: 'characters/:id', component: CharacterDetailsComponent }
+    { path: 'characters/:id', component: CharacterDetailsComponent },
+    { path: '', redirectTo: 'characters', pathMatch: 'full' }
 ];
