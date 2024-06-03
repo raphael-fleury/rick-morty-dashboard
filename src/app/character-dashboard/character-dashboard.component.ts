@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { CharacterCardComponent } from "../character-card/character-card.component";
 import { CharacterService } from '../character.service';
 import { Character } from '../models/character.model';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { ScrollNearEndDirective } from '../shared/directives/scroll-near-end.directive';
 import { SearchBarService } from '../core/services/search-bar.service';
 import { SearchBarComponent } from '../core/components/search-bar/search-bar.component';
@@ -12,7 +11,7 @@ import { SearchBarComponent } from '../core/components/search-bar/search-bar.com
   templateUrl: './character-dashboard.component.html',
   styleUrl: './character-dashboard.component.css',
   standalone: true,
-  imports: [CharacterCardComponent, NgIf, ScrollNearEndDirective, SearchBarComponent]
+  imports: [NgIf, NgFor, ScrollNearEndDirective, SearchBarComponent]
 })
 export class CharacterDashboardComponent {
 
