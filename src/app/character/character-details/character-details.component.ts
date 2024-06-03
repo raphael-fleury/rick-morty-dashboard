@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CharacterService } from '../character.service';
 import { Character } from '../character.model';
-import { Episode } from '../../models/episode.model';
-import { EpisodeService } from '../../episode.service';
+import { Episode } from '../../episode/episode.model';
+import { EpisodeService } from '../../episode/episode.service';
 
 @Component({
   selector: 'app-character-details',
@@ -12,7 +12,6 @@ import { EpisodeService } from '../../episode.service';
 })
 export class CharacterDetailsComponent {
 
-  Math: Math
   character!: Character
   episodes: Episode[] = [];
 
@@ -21,7 +20,7 @@ export class CharacterDetailsComponent {
     private route: ActivatedRoute,
     private characterService: CharacterService,
     private episodeService: EpisodeService
-  ) { this.Math = Math }
+  ) {}
 
   ngOnInit() {
     const id = +(this.route.snapshot.paramMap.get('id') ?? "");
