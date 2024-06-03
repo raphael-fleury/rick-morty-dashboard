@@ -1,11 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Character } from './character.model';
-import { Page } from '../models/page.model';
+import { Page } from '../shared/models/page.model';
 
 @Injectable({
-  providedIn: 'root',
-  deps: [HttpClient]
+  providedIn: 'root'
 })
 export class CharacterService {
 

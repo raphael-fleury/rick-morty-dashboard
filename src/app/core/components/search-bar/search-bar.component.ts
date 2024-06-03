@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
 import { SearchBarService } from '../../services/search-bar.service';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
-  styleUrl: './search-bar.component.css',
-  standalone: true,
-  imports: [FormsModule]
+  styleUrl: './search-bar.component.css'
 })
 export class SearchBarComponent {
   constructor(public searchBarService: SearchBarService) { }

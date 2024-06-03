@@ -1,8 +1,7 @@
-import { Directive, ElementRef, EventEmitter, HostListener, Input, OnInit, Output } from "@angular/core";
+import { Directive, ElementRef, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 
 @Directive({
-  selector: '[appScrollNearEnd]',
-  standalone: true,
+  selector: '[appScrollNearEnd]'
 })
 export class ScrollNearEndDirective implements OnInit {
   @Input() threshold = 120;
@@ -27,7 +26,6 @@ export class ScrollNearEndDirective implements OnInit {
     const distanceToBottom = elementHeight - innerHeight - currentScrolledY + spaceAboveElement;
 
     if (distanceToBottom < this.threshold) {
-      console.log('distance')
       this.nearEnd.emit();
     }
   }

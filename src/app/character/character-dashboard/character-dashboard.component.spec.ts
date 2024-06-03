@@ -8,7 +8,7 @@ describe('CharacterDashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CharacterDashboardComponent]
+      declarations: [CharacterDashboardComponent]
     })
     .compileComponents();
     
