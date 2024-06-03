@@ -1,0 +1,5 @@
+@media (min-width: 768px) {
+  .container-fluid {
+    columns: 2
+  }
+}

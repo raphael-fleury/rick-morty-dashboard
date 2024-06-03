@@ -18,4 +18,8 @@ export class CharacterService {
       params: {name, page, limit}
     })
   }
+
+  getCharacterById(id: number) {
+    return this.http.get<Character>(`${this.apiURL}/${id}`)
+  }
 }
