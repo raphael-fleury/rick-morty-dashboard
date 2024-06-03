@@ -13,9 +13,9 @@ export class CharacterService {
 
   constructor(private http : HttpClient) { }
 
-  getCharacters(page: number, limit = 20) {
+  getCharacters(name: string, page: number, limit = 20) {
     return this.http.get<Page<Character>>(this.apiURL, {
-      params: {page, limit}
+      params: {name, page, limit}
     })
   }
 }
