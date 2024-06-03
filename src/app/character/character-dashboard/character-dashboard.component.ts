@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
 import { CharacterService } from '../character.service';
-import { Character } from '../models/character.model';
-import { NgFor, NgIf } from '@angular/common';
-import { ScrollNearEndDirective } from '../shared/directives/scroll-near-end.directive';
-import { SearchBarService } from '../core/services/search-bar.service';
-import { SearchBarComponent } from '../core/components/search-bar/search-bar.component';
+import { Character } from '../character.model';
+import { SearchBarService } from '../../core/services/search-bar.service';
 
 @Component({
   selector: 'app-character-dashboard',
   templateUrl: './character-dashboard.component.html',
-  styleUrl: './character-dashboard.component.css',
-  standalone: true,
-  imports: [NgIf, NgFor, ScrollNearEndDirective, SearchBarComponent]
+  styleUrl: './character-dashboard.component.css'
 })
 export class CharacterDashboardComponent {
 
@@ -52,8 +47,11 @@ export class CharacterDashboardComponent {
         this.loading = false
       },
       error: (error) => {
-        console.error(error)
         this.loading = false
+        console.error(error)
+        if (error.status !== 404) {
+          alert("Error on loading characters. Check console for more info.")
+        }
       }
     })
   }

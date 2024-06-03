@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CharacterService } from '../character.service';
-import { Character } from '../models/character.model';
-import { Episode } from '../models/episode.model';
-import { EpisodeService } from '../episode.service';
-import { NgFor, NgIf } from '@angular/common';
+import { Character } from '../character.model';
+import { Episode } from '../../models/episode.model';
+import { EpisodeService } from '../../episode.service';
 
 @Component({
   selector: 'app-character-details',
   templateUrl: './character-details.component.html',
-  styleUrl: './character-details.component.css',
-  standalone: true,
-  imports: [NgIf, NgFor]
+  styleUrl: './character-details.component.css'
 })
 export class CharacterDetailsComponent {
 
