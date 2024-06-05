@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { SearchBarService } from '../../services/search-bar.service';
 
 @Component({
-  selector: 'app-search-bar',
-  templateUrl: './search-bar.component.html',
-  styleUrl: './search-bar.component.css'
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.css'
 })
-export class SearchBarComponent {
+export class NavbarComponent {
   constructor(public searchBarService: SearchBarService) { }
 
   timeout: any = null

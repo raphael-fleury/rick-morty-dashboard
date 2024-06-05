@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-light col px-3">
+  <form class="col-auto col-md-3">
+    <input class="form-control mr-sm-2"
+      type="search" placeholder="Search" aria-label="Search"
+      #searchBar (keyup)="onKeyUp($event)"
+    >
+  </form>
+  <ul class="nav col-auto col-md-6 justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/characters']">Characters</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/episodes']">Episodes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/locations']">Locations</a>
+    </li>
+  </ul>
+  <div class="col-auto col-md-3"></div>
+</nav>

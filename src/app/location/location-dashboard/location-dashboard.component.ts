@@ -40,7 +40,6 @@ export class LocationDashboardComponent {
     const page = this.pagination.currentPage + 1
     this.locationService.getLocations(nameFilter, page).subscribe({
       next: (page) => {
-        console.log(page)
         this.locations.push(...page.results)
         this.pagination.hasNext = page.info.next !== null
         this.pagination.currentPage++

@@ -1,5 +1,4 @@
-<app-search-bar></app-search-bar>
-<div appScrollNearEnd (nearEnd)="loadLocations()" class="d-flex card-deck flex-wrap mt-3 gap-2">
+<div appScrollNearEnd (nearEnd)="loadLocations()" class="d-flex card-deck flex-wrap gap-2">
     <div class="card col-2" *ngFor="let location of locations">
         <div class="card-body">
             <a href="{{'/locations/' + location.id}}" class="link-underline link-underline-opacity-0">

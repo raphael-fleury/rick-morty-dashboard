@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SearchBarService } from './services/search-bar.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    SearchBarComponent
+    NavbarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, RouterModule
   ],
-  exports: [SearchBarComponent],
+  exports: [NavbarComponent],
   providers: [SearchBarService]
 })
 export class CoreModule { }
