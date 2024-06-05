@@ -9,6 +9,7 @@ import { CoreModule } from './core/core.module';
 import { CharacterModule } from './character/character.module';
 import { SharedModule } from './shared/shared.module';
 import { EpisodeModule } from './episode/episode.module';
+import { LocationModule } from './location/location.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EpisodeModule } from './episode/episode.module';
     CoreModule,
     SharedModule,
     CharacterModule,
-    EpisodeModule
+    EpisodeModule,
+    LocationModule
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]
