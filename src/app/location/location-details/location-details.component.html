@@ -1,0 +1,18 @@
+<header>
+
+    <h1>{{location.name}}</h1>
+    <div class="col">
+        <b>Type:</b> {{location.type}}
+    </div>
+    <div class="col">
+        <b>Dimension:</b> {{location.dimension}}
+    </div>
+</header>
+<main class="mt-3">
+    <b>Residents:</b>
+    <div class="container-fluid p-0">
+        <div *ngFor="let character of residents">
+            <a href="{{'/characters/' + character.id}}">{{character.name}}</a>
+        </div>
+    </div>
+</main>

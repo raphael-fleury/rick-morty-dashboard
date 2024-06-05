@@ -18,6 +18,10 @@ export class CharacterService {
     })
   }
 
+  getMultipleCharacters(ids: number[]) {
+    return this.http.get<Character[]>(`${this.apiURL}/[${ids.join(',')}]`)
+  }
+
   getCharacterById(id: number) {
     return this.http.get<Character>(`${this.apiURL}/${id}`)
   }

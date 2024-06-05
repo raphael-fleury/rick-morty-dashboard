@@ -1,0 +1,17 @@
+@media (min-width: 576px) {
+  .container-fluid {
+    columns: 2
+  }
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    columns: 3
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-fluid {
+    columns: 4
+  }
+}

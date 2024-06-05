@@ -4,10 +4,12 @@ import { LocationDashboardComponent } from './location-dashboard/location-dashbo
 import { CoreModule } from '../core/core.module';
 import { LocationService } from './location.service';
 import { SharedModule } from '../shared/shared.module';
+import { LocationDetailsComponent } from './location-details/location-details.component';
 
 @NgModule({
   declarations: [
-    LocationDashboardComponent
+    LocationDashboardComponent,
+    LocationDetailsComponent
   ],
   imports: [
     CommonModule,

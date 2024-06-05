@@ -17,4 +17,8 @@ export class LocationService {
       params: {name, page, limit}
     })
   }
+
+  getLocationById(id: number) {
+    return this.http.get<Location>(`${this.apiURL}/${id}`)
+  }
 }
