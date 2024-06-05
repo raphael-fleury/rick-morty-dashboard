@@ -5,6 +5,7 @@ import { CharacterDetailsComponent } from './character/character-details/charact
 import { LocationDashboardComponent } from './location/location-dashboard/location-dashboard.component';
 import { LocationDetailsComponent } from './location/location-details/location-details.component';
 import { EpisodeDashboardComponent } from './episode/episode-dashboard/episode-dashboard.component';
+import { EpisodeDetailsComponent } from './episode/episode-details/episode-details.component';
 
 const routes: Routes = [
   { path: 'characters', component: CharacterDashboardComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'locations', component: LocationDashboardComponent },
   { path: 'locations/:id', component: LocationDetailsComponent },
   { path: 'episodes', component: EpisodeDashboardComponent },
+  { path: 'episodes/:id', component: EpisodeDetailsComponent },
   { path: '', redirectTo: 'characters', pathMatch: 'full' }
 ];
 

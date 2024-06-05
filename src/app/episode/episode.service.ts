@@ -21,4 +21,8 @@ export class EpisodeService {
   getMultipleEpisodes(ids: number[]) {
     return this.http.get<Episode[]>(`${this.apiURL}/[${ids.join(',')}]`)
   }
+
+  getEpisodeById(id: number) {
+    return this.http.get<Episode>(`${this.apiURL}/${id}`)
+  }
 }

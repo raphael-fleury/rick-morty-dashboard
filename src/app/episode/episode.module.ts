@@ -4,10 +4,12 @@ import { EpisodeService } from './episode.service';
 import { EpisodeDashboardComponent } from './episode-dashboard/episode-dashboard.component';
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
+import { EpisodeDetailsComponent } from './episode-details/episode-details.component';
 
 @NgModule({
   declarations: [
-    EpisodeDashboardComponent
+    EpisodeDashboardComponent,
+    EpisodeDetailsComponent
   ],
   imports: [CommonModule, CoreModule, SharedModule],
   providers: [EpisodeService]
