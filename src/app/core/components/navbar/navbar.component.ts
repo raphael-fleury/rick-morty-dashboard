@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { SearchBarService } from '../../services/search-bar.service';
 
+const dashboards = ['/characters', '/episodes', '/locations']
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -19,5 +21,9 @@ export class NavbarComponent {
         service.text = event.target.value
       }
     }, 500);
+  }
+
+  searchBarIsVisible() {
+    return dashboards.includes(window.location.pathname)
   }
 }

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-light col px-3">
   <form class="col-auto col-md-3">
-    <input class="form-control mr-sm-2"
+    <input class="form-control mr-sm-2" *ngIf="searchBarIsVisible()"
       type="search" placeholder="Search" aria-label="Search"
       #searchBar (keyup)="onKeyUp($event)"
     >
