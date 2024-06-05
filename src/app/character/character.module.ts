@@ -4,6 +4,7 @@ import { CharacterDashboardComponent } from './character-dashboard/character-das
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { CharacterService } from './character.service';
 import { CoreModule } from "../core/core.module";
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CoreModule } from "../core/core.module";
   providers: [CharacterService],
   imports: [
     CommonModule,
-    CoreModule
+    CoreModule,
+    SharedModule
   ]
 })
 export class CharacterModule { }

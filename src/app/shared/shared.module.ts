@@ -8,6 +8,7 @@ import { ScrollNearEndDirective } from './directives/scroll-near-end.directive';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [ScrollNearEndDirective]
 })
 export class SharedModule { }
