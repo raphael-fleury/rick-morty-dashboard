@@ -1,0 +1,16 @@
+<app-search-bar></app-search-bar>
+<div appScrollNearEnd (nearEnd)="loadCharacters()" class="d-flex card-deck flex-wrap mt-3 gap-2">
+    <div class="card col-2" *ngFor="let episode of episodes">
+        <div class="card-header">
+            <p class="card-text mb-1">{{episode.episode}}</p>
+        </div>
+        <div class="card-body">
+            <a href="{{'/episodes/' + episode.id}}" class="link-underline link-underline-opacity-0">
+                <h5 class="card-title">{{episode.name}}</h5>
+            </a>
+        </div>
+        <div class="card-footer text-muted">
+            <p class="card-text mb-1">{{episode.air_date}}</p>
+        </div>
+    </div>
+</div>
