@@ -22,13 +22,13 @@
                         {{character.origin.name}}
                     </div>
                     <div class="col" *ngIf="character?.origin?.name !== 'unknown'">
-                        <a href="{{'/locations/' + originId}}">{{character.origin.name}}</a>
+                        <a [routerLink]="['/locations/' + originId]">{{character.origin.name}}</a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col"><b>Last known location:</b></div>
                     <div class="col">
-                        <a href="{{'/locations/' + locationId}}">{{character.location.name}}</a>
+                        <a [routerLink]="['/locations/' + locationId]">{{character.location.name}}</a>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
         <div class="row" *ngFor="let episode of episodes">
             <div class="col">{{episode.air_date}}</div>
             <div class="col">
-                <a href="{{'/episodes/' + episode.id}}">{{episode.name}}</a>
+                <a [routerLink]="['/episodes/' + episode.id]">{{episode.name}}</a>
             </div>
         </div>
     </div>

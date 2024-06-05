@@ -5,6 +5,7 @@ import { CharacterDetailsComponent } from './character-details/character-details
 import { CharacterService } from './character.service';
 import { CoreModule } from "../core/core.module";
 import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     CoreModule,
+    RouterModule,
     SharedModule
   ]
 })

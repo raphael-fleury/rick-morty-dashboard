@@ -4,7 +4,7 @@
             <p class="card-text mb-1">{{episode.episode}}</p>
         </div>
         <div class="card-body">
-            <a href="{{'/episodes/' + episode.id}}" class="link-underline link-underline-opacity-0">
+            <a [routerLink]="['/episodes/' + episode.id]" class="link-underline link-underline-opacity-0">
                 <h5 class="card-title">{{episode.name}}</h5>
             </a>
         </div>

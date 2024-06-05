@@ -5,13 +5,14 @@ import { EpisodeDashboardComponent } from './episode-dashboard/episode-dashboard
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { EpisodeDetailsComponent } from './episode-details/episode-details.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     EpisodeDashboardComponent,
     EpisodeDetailsComponent
   ],
-  imports: [CommonModule, CoreModule, SharedModule],
+  imports: [CommonModule, CoreModule, RouterModule, SharedModule],
   providers: [EpisodeService]
 })
 export class EpisodeModule { }

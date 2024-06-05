@@ -5,6 +5,7 @@ import { CoreModule } from '../core/core.module';
 import { LocationService } from './location.service';
 import { SharedModule } from '../shared/shared.module';
 import { LocationDetailsComponent } from './location-details/location-details.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { LocationDetailsComponent } from './location-details/location-details.co
   imports: [
     CommonModule,
     CoreModule,
+    RouterModule,
     SharedModule
   ],
   providers: [LocationService]

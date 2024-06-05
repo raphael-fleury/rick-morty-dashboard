@@ -12,7 +12,7 @@
     <b>Residents:</b>
     <div class="container-fluid p-0">
         <div *ngFor="let character of residents">
-            <a href="{{'/characters/' + character.id}}">{{character.name}}</a>
+            <a [routerLink]="['/characters/' + character.id]">{{character.name}}</a>
         </div>
     </div>
 </main>
