@@ -13,6 +13,11 @@ export class ScrollNearEndDirective implements OnInit {
 
   ngOnInit() {
     this.window = window;
+    setTimeout(() => {
+      if (this.window.innerHeight >= this.window.document.documentElement.scrollHeight) {
+        this.nearEnd.emit();
+      }
+    }, 100)
   }
 
   @HostListener('window:scroll', ['$event.target'])
