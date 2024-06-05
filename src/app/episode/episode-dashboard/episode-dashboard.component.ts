@@ -28,10 +28,10 @@ export class EpisodeDashboardComponent {
   }
 
   ngOnInit() {
-    this.loadCharacters()
+    this.loadEpisodes()
   }
 
-  loadCharacters() {
+  loadEpisodes() {
     if (this.loading || !this.pagination.hasNext)
       return
 
@@ -63,6 +63,6 @@ export class EpisodeDashboardComponent {
     }
 
     this.episodes = []
-    this.loadCharacters()
+    this.loadEpisodes()
   }
 }

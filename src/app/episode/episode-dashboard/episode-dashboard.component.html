@@ -1,5 +1,5 @@
 <app-search-bar></app-search-bar>
-<div appScrollNearEnd (nearEnd)="loadCharacters()" class="d-flex card-deck flex-wrap mt-3 gap-2">
+<div appScrollNearEnd (nearEnd)="loadEpisodes()" class="d-flex card-deck flex-wrap mt-3 gap-2">
     <div class="card col-2" *ngFor="let episode of episodes">
         <div class="card-header">
             <p class="card-text mb-1">{{episode.episode}}</p>
