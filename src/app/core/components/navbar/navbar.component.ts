@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { SearchBarService } from '../../services/search-bar.service';
+import { DropdownComponent } from '../../../shared/components/dropdown/dropdown.component';
+import { AuthService } from '../../services/auth.service';
 
 const dashboards = ['/characters', '/episodes', '/locations']
 
@@ -9,7 +11,12 @@ const dashboards = ['/characters', '/episodes', '/locations']
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  constructor(public searchBarService: SearchBarService) { }
+  @ViewChild(DropdownComponent) dropdown!: DropdownComponent
+
+  constructor(
+    public authService: AuthService,
+    private searchBarService: SearchBarService
+  ) { }
 
   timeout: any = null
 
@@ -25,5 +32,9 @@ export class NavbarComponent {
 
   searchBarIsVisible() {
     return dashboards.includes(window.location.pathname)
+  }
+
+  toggleDropdown() {
+    this.dropdown.toggle()
   }
 }
