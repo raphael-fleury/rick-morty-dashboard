@@ -12,9 +12,9 @@ export class LocationService {
 
   constructor(private http : HttpClient) { }
 
-  getLocations(name: string, page: number, limit = 20) {
+  getLocations(name: string, page: number) {
     return this.http.get<Page<Location>>(this.apiURL, {
-      params: {name, page, limit}
+      params: {name, page}
     })
   }
 

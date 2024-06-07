@@ -12,9 +12,9 @@ export class EpisodeService {
 
   constructor(private http: HttpClient) { }
 
-  getEpisodes(name: string, page: number, limit = 20) {
+  getEpisodes(name: string, page: number) {
     return this.http.get<Page<Episode>>(this.apiURL, {
-      params: {name, page, limit}
+      params: {name, page}
     })
   }
 

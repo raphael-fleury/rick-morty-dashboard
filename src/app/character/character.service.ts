@@ -12,9 +12,9 @@ export class CharacterService {
 
   constructor(private http : HttpClient) { }
 
-  getCharacters(name: string, page: number, limit = 20) {
+  getCharacters(name: string, page: number) {
     return this.http.get<Page<Character>>(this.apiURL, {
-      params: {name, page, limit}
+      params: {name, page}
     })
   }
 
