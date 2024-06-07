@@ -7,15 +7,18 @@ import { LocationDetailsComponent } from './location/location-details/location-d
 import { EpisodeDashboardComponent } from './episode/episode-dashboard/episode-dashboard.component';
 import { EpisodeDetailsComponent } from './episode/episode-details/episode-details.component';
 import { LoginComponent } from './core/components/login/login.component';
+import { authGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
-  { path: 'characters', component: CharacterDashboardComponent },
-  { path: 'characters/:id', component: CharacterDetailsComponent },
-  { path: 'locations', component: LocationDashboardComponent },
-  { path: 'locations/:id', component: LocationDetailsComponent },
-  { path: 'episodes', component: EpisodeDashboardComponent },
-  { path: 'episodes/:id', component: EpisodeDetailsComponent },
-  { path: '', pathMatch: 'full', component: LoginComponent }
+  { path: 'characters', component: CharacterDashboardComponent, canMatch: [authGuard] },
+  { path: 'characters/:id', component: CharacterDetailsComponent, canMatch: [authGuard] },
+  { path: 'locations', component: LocationDashboardComponent, canMatch: [authGuard] },
+  { path: 'locations/:id', component: LocationDetailsComponent, canMatch: [authGuard] },
+  { path: 'episodes', component: EpisodeDashboardComponent, canMatch: [authGuard] },
+  { path: 'episodes/:id', component: EpisodeDetailsComponent, canMatch: [authGuard] },
+  { path: '', pathMatch: 'full', redirectTo: 'characters', canMatch: [authGuard] },
+  { path: '**', redirectTo: 'characters', canMatch: [authGuard] },
+  { path: '**', component: LoginComponent }
 ];
 
 @NgModule({
