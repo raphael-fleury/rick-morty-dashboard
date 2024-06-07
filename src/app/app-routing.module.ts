@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'episodes/:id', component: EpisodeDetailsComponent, canMatch: [authGuard] },
   { path: 'profile', component: ProfileComponent, canMatch: [authGuard] },
   { path: '**', redirectTo: 'profile', canMatch: [authGuard] },
-  { path: '**', component: LoginComponent }
+  { path: '**', redirectTo: '' },
+  { path: '', component: LoginComponent }
 ];
 
 @NgModule({
