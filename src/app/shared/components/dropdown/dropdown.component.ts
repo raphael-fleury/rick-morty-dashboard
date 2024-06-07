@@ -1,4 +1,4 @@
-import { Component, ContentChild, ElementRef, Input, Renderer2, TemplateRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
