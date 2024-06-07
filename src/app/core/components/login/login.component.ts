@@ -27,6 +27,6 @@ export class LoginComponent {
 
   login() {
     this.authService.login(this.characters[this.selectedCharacterIndex])
-    window.location.replace('/characters')
+    window.location.replace('/')
   }
 }

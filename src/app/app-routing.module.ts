@@ -8,6 +8,7 @@ import { EpisodeDashboardComponent } from './episode/episode-dashboard/episode-d
 import { EpisodeDetailsComponent } from './episode/episode-details/episode-details.component';
 import { LoginComponent } from './core/components/login/login.component';
 import { authGuard } from './core/guards/auth.guard';
+import { ProfileComponent } from './core/components/profile/profile.component';
 
 const routes: Routes = [
   { path: 'characters', component: CharacterDashboardComponent, canMatch: [authGuard] },
@@ -16,8 +17,8 @@ const routes: Routes = [
   { path: 'locations/:id', component: LocationDetailsComponent, canMatch: [authGuard] },
   { path: 'episodes', component: EpisodeDashboardComponent, canMatch: [authGuard] },
   { path: 'episodes/:id', component: EpisodeDetailsComponent, canMatch: [authGuard] },
-  { path: '', pathMatch: 'full', redirectTo: 'characters', canMatch: [authGuard] },
-  { path: '**', redirectTo: 'characters', canMatch: [authGuard] },
+  { path: 'profile', component: ProfileComponent, canMatch: [authGuard] },
+  { path: '**', redirectTo: 'profile', canMatch: [authGuard] },
   { path: '**', component: LoginComponent }
 ];
 

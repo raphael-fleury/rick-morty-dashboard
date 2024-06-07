@@ -9,11 +9,19 @@ export class AuthService {
     return !!window.localStorage.getItem('character')
   }
 
+  getCharacter() {
+    if (!this.isLoggedIn())
+      return null
+    
+    return JSON.parse(window.localStorage.getItem('character')!)
+  }
+
   login(character: Character) {
     window.localStorage.setItem('character', JSON.stringify(character))
   }
 
   logout() {
     window.localStorage.removeItem('character')
+    window.location.replace('/')
   }
 }
