@@ -1,0 +1,10 @@
+<form (submit)="login()" class="col-12 col-sm-6 col-md-4 login">
+    <h1 class="text-center">Welcome!</h1>
+    <label for="character" class="mb-1">Select a character to continue</label>
+    <select name="character" id="character" class="form-control mb-2" required [(ngModel)]="selectedCharacterIndex">
+        <option *ngFor="let character of characters; index as i" [value]="i">
+            {{character.name}}
+        </option>
+    </select>
+    <input type="submit" class="btn btn-primary" value="Continue" [disabled]="selectedCharacterIndex === 0">
+</form>
