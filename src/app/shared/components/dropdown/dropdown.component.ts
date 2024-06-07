@@ -13,13 +13,12 @@ export class DropdownComponent {
   @Input() left: string | undefined
   @Input() right: string | undefined
 
-  hidden = false
+  hidden = true
 
   constructor(private renderer: Renderer2) {
     this.renderer.listen('window', 'click', (e: Event) => {
       const isTarget = this.container.nativeElement.contains(e.target)
       const controllerIsTarget = (this.controller as any).contains(e.target)
-      console.log({isTarget, controllerIsTarget})
       if (!isTarget && !controllerIsTarget) {
         this.hidden = true;
       }
