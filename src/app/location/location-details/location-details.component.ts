@@ -33,7 +33,7 @@ export class LocationDetailsComponent {
   }
 
   loadLocation(id: number) {
-    this.locationService.getLocationById(id).subscribe({
+    this.locationService.getById(id).subscribe({
       next: (location) => {
         this.location = location
         this.loadCharacters()
@@ -51,7 +51,7 @@ export class LocationDetailsComponent {
   }
 
   loadCharacters() {
-    this.characterService.getMultipleCharacters(this.residentIds).subscribe({
+    this.characterService.getMultiple(this.residentIds).subscribe({
       next: (residents) => { this.residents = residents }
     })
   }

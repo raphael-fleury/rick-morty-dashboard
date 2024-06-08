@@ -18,7 +18,7 @@ export class LoginComponent {
   ) { }
 
   ngOnInit() {
-    this.characterService.getCharacters("", 1).subscribe({
+    this.characterService.getAll("", 1).subscribe({
       next: (page) => {
         this.characters = page.results
       }

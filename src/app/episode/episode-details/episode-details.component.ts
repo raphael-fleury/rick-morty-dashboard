@@ -32,7 +32,7 @@ export class EpisodeDetailsComponent {
   }
 
   loadEpisode(id: number) {
-    this.episodeService.getEpisodeById(id).subscribe({
+    this.episodeService.getById(id).subscribe({
       next: (episode) => {
         this.episode = episode
         this.loadCharacters()
@@ -50,7 +50,7 @@ export class EpisodeDetailsComponent {
   }
 
   loadCharacters() {
-    this.characterService.getMultipleCharacters(this.characterIds).subscribe({
+    this.characterService.getMultiple(this.characterIds).subscribe({
       next: (characters) => { this.characters = characters }
     })
   }

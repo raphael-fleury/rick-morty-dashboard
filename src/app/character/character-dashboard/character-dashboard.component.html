@@ -1,4 +1,4 @@
-<div appScrollNearEnd (nearEnd)="loadCharacters()" class="d-flex card-deck flex-wrap gap-2">
+<app-dashboard [service]="characterService" (updateEntities)="this.characters = $event">
     <div class="card col-2" *ngFor="let character of characters">
         <img class="card-img-top" src={{character.image}} alt={{character.name}}>
         <div class="card-body">
@@ -14,4 +14,4 @@
             </a>
         </div>
     </div>
-</div>
+</app-dashboard>

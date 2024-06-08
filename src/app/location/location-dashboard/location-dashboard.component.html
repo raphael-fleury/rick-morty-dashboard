@@ -1,4 +1,4 @@
-<div appScrollNearEnd (nearEnd)="loadLocations()" class="d-flex card-deck flex-wrap gap-2">
+<app-dashboard [service]="locationService" (updateEntities)="this.locations = $event">
     <div class="card col-2" *ngFor="let location of locations">
         <div class="card-body">
             <a [routerLink]="['/locations/' + location.id]" class="link-underline link-underline-opacity-0">
@@ -8,4 +8,4 @@
             <p class="card-text mb-1"><b>Dimension:</b> {{location.dimension || "-"}}</p>
         </div>
     </div>
-</div>
+</app-dashboard>
