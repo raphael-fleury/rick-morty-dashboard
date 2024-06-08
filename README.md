@@ -1,27 +1,59 @@
-# RickMortyDashboard
+# Rick & Morty Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+Projeto desenvolvido com Angular 18 e Bootstrap 5 para um teste técnico. Utiliza a [Rick & Morty API](https://rickandmortyapi.com/) para listar todos os personagens, episódios e cenários da série. Possui um sistema de autenticação simulatório onde é necessário escolher um personagem para prosseguir para as páginas internas.
 
-## Development server
+## Instalação e Execução
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para instalar dependências:
+```bash
+npm install
+```
 
-## Code scaffolding
+Para executar:
+```bash
+npm run start
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para gerar build do projeto:
+```bash
+npm run build
+```
 
-## Build
+Para executar testes:
+```bash
+npm run test
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Páginas
+`/` - Página de Login.
 
-## Running unit tests
+`/profile` - Página principal.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`/characters` - Lista todos os personagens.
 
-## Running end-to-end tests
+`/characters/:id` - Mostra detalhes de um personagem específico e lista os episódios em que ele participa.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+`/episodes` - Lista todos os episódios.
 
-## Further help
+`/episodes/:id` - Mostra detalhes de um episódio específico e lista os personagens que participam do episódio.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+`/locations` - Lista todos os cenários.
+
+`/locations/:id` - Mostra detalhes de um cenário específico e lista os personagens que foram vistos pela última vez lá.
+
+## Arquitetura
+
+### Módulos
+`app` - Módulo principal, responsável pelo funcionamento da aplicação.
+
+`app-routing` - Gerencia o roteamento das páginas.
+
+`core` - Inclui elementos essenciais em toda a aplicação como o sistema de autenticação e a barra de navegação.
+
+`shared` - Contém componentes, diretivas e outros elementos que podem ser usados em diferentes páginas ou módulos.
+
+`character` - Inclui todos os elementos que se referem aos personagens, como as páginas de listagem, de detalhes e chamadas à API.
+
+`episode` - Inclui todos os elementos que se referem aos episódios, como as páginas de listagem, de detalhes e chamadas à API.
+
+`location` - Inclui todos os elementos que se referem aos cenários, como as páginas de listagem, de detalhes e chamadas à API.
