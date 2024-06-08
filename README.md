@@ -3,6 +3,7 @@
 Projeto desenvolvido com Angular 18 e Bootstrap 5 para um teste técnico. Utiliza a [Rick & Morty API](https://rickandmortyapi.com/) para listar todos os personagens, episódios e cenários da série. Possui um sistema de autenticação simulatório onde é necessário escolher um personagem para prosseguir para as páginas internas.
 
 ## Instalação e Execução
+**Primeiramente é necessário ter o [NodeJS](https://nodejs.org/en) instalado.**
 
 Para instalar dependências:
 ```bash
@@ -25,7 +26,11 @@ npm run test
 ```
 
 ## Páginas
+Externas:
+
 `/` - Página de Login.
+
+Internas:
 
 `/profile` - Página principal.
 
