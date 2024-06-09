@@ -1,15 +1,15 @@
-<app-dashboard  [service]="episodeService" (updateEntities)="this.episodes = $event">
-  <div class="card col-2" *ngFor="let episode of episodes">
-    <div class="card-header">
-      <p class="card-text mb-1">{{episode.episode}}</p>
+<app-dashboard [service]="episodeService" (updateEntities)="this.episodes = $event">
+    <div class="card col-2" *ngFor="let episode of episodes">
+        <div class="card-header">
+            <p class="card-text mb-1">{{episode.episode}}</p>
+        </div>
+        <div class="card-body">
+            <a [routerLink]="['/episodes/' + episode.id]" class="link-underline link-underline-opacity-0">
+                <h5 class="card-title">{{episode.name}}</h5>
+            </a>
+        </div>
+        <div class="card-footer text-muted">
+            <p class="card-text mb-1">{{episode.air_date}}</p>
+        </div>
     </div>
-    <div class="card-body">
-      <a [routerLink]="['/episodes/' + episode.id]" class="link-underline link-underline-opacity-0">
-        <h5 class="card-title">{{episode.name}}</h5>
-      </a>
-    </div>
-    <div class="card-footer text-muted">
-      <p class="card-text mb-1">{{episode.air_date}}</p>
-    </div>
-  </div>
 </app-dashboard>

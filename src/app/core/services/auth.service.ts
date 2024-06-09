@@ -12,7 +12,7 @@ export class AuthService {
   getCharacter() {
     if (!this.isLoggedIn())
       return null
-    
+
     return JSON.parse(window.localStorage.getItem('character')!)
   }
 

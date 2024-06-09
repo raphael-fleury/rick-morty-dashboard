@@ -1,34 +1,35 @@
 <nav class="navbar navbar-light bg-light col px-3" *ngIf="authService.isLoggedIn()">
-  <form class="col-auto col-md-3">
-    <input class="form-control mr-sm-2" *ngIf="searchBarIsVisible()" type="search" placeholder="Search"
-      aria-label="Search" #searchBar (keyup)="onKeyUp($event)">
-  </form>
-  <ul class="nav col-auto col-md-6 justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/characters']">Characters</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/episodes']">Episodes</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/locations']">Locations</a>
-    </li>
-  </ul>
-  <div class="d-flex col-auto col-md-3 justify-content-end dropdown">
-    <a href="#" onClick="return false;" (click)="toggleDropdown()" #dropdownController>
-      <img src="assets/images/more.webp" alt="User" width="32px" height="32px">
-    </a>
-    <app-dropdown [controller]="dropdownController" top="42px" right="0px">
-      <li>
-        <a class="dropdown-item d-flex align-items-center gap-2" [routerLink]="'/profile'" (click)="toggleDropdown()">
-          <img src="assets/images/user.png" width="16px" height="16px">
-          Profile
+    <form class="col-auto col-md-3">
+        <input class="form-control mr-sm-2" *ngIf="searchBarIsVisible()" type="search" placeholder="Search"
+            aria-label="Search" #searchBar (keyup)="onKeyUp($event)">
+    </form>
+    <ul class="nav col-auto col-md-6 justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/characters']">Characters</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/episodes']">Episodes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/locations']">Locations</a>
+        </li>
+    </ul>
+    <div class="d-flex col-auto col-md-3 justify-content-end dropdown">
+        <a href="#" onClick="return false;" (click)="toggleDropdown()" #dropdownController>
+            <img src="assets/images/more.webp" alt="User" width="32px" height="32px">
         </a>
-        <a class="dropdown-item d-flex align-items-center gap-2" (click)="authService.logout()">
-          <img src="assets/images/logout.png" width="16px" height="16px">
-          Logout
-        </a>
-      </li>
-    </app-dropdown>
-  </div>
+        <app-dropdown [controller]="dropdownController" top="42px" right="0px">
+            <li>
+                <a class="dropdown-item d-flex align-items-center gap-2" [routerLink]="'/profile'"
+                    (click)="toggleDropdown()">
+                    <img src="assets/images/user.png" width="16px" height="16px">
+                    Profile
+                </a>
+                <a class="dropdown-item d-flex align-items-center gap-2" (click)="authService.logout()">
+                    <img src="assets/images/logout.png" width="16px" height="16px">
+                    Logout
+                </a>
+            </li>
+        </app-dropdown>
+    </div>
 </nav>

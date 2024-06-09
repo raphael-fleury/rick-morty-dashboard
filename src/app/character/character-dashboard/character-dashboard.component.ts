@@ -9,6 +9,6 @@ import { Character } from '../character.model';
 })
 export class CharacterDashboardComponent {
   characters: Character[] = []
-  
+
   constructor(public characterService: CharacterService) { }
 }

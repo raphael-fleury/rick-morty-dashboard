@@ -19,7 +19,7 @@ export class EpisodeDetailsComponent {
     private route: ActivatedRoute,
     private episodeService: EpisodeService,
     private characterService: CharacterService
-  ) {}
+  ) { }
 
   ngOnInit() {
     const id = +(this.route.snapshot.paramMap.get('id') ?? "");
@@ -42,7 +42,7 @@ export class EpisodeDetailsComponent {
           this.router.navigate(['/episodes'])
           return
         }
-  
+
         console.error(error)
         alert("Error on loading episode. Check console for more info.")
       }
